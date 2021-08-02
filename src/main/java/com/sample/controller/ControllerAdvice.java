@@ -1,0 +1,27 @@
+//package com.sample.controller;
+//
+//import org.springframework.dao.DataAccessException;
+//
+//import org.springframework.ui.Model;
+//import org.springframework.web.bind.annotation.ExceptionHandler;
+//import org.springframework.web.bind.annotation.RestControllerAdvice;
+//
+//@RestControllerAdvice
+//
+//public class ControllerAdvice {
+//
+//    @ExceptionHandler(DataAccessException.class)
+//    public String dataAccessExceptionHandler(DataAccessException e, Model model) {
+//
+//       
+//
+//        return "messages/id-not-found";
+//    }
+//
+//    @ExceptionHandler(Exception.class)
+//    public String exceptionHandler(Exception e, Model model) {
+//
+//       
+//        return "messages/id-not-found";
+//    }
+//}

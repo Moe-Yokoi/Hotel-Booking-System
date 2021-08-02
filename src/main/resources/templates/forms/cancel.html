@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<style type="text/css">
+  
+  th{
+  padding:10px;
+  }
+  td{
+  padding:10px;
+  }
+</style>
+<title>Cancellation</title>
+</head>
+<body>
+<form action="/cancel/complete" method="POST">
+<table>
+			
+				<tr>
+				    <th>Booking Number</th>
+					<th>First Name</th>
+					<th>Last Name</th>
+					<th>Email Address</th>
+					<th>Date</th>
+					<th>Room Type</th>
+				</tr>
+			
+		
+			<tbody>
+				<tr th:each="field: ${requestedInfo}"> 
+				<td th:text="${field.bookingNumber}"></td>
+				<td th:text="${field.firstName}"></td>
+				<td th:text="${field.lastName}"></td>
+					<td th:text="${field.email}"></td>
+					<td th:text="${field.date}"></td>
+					<td th:text="${field.roomType}"></td>
+				</tr>
+			</tbody>
+		</table> 
+		
+
+
+  	
+  <button type="submit" class="btn btn-primary">complete cancellation</button>
+		
+		
+</form>
+		
+		<a href = "/"><button type= "button">Home</button></a>
+
+
+
+</body>
+</html>
