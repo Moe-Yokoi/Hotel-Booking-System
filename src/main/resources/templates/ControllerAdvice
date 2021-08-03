@@ -1,3 +1,6 @@
+//If not using error.html, this Class should be activated. Otherwise; use try-catch method
+
+
 //package com.sample.controller;
 //
 //import org.springframework.dao.DataAccessException;

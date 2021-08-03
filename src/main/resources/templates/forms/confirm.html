@@ -21,8 +21,11 @@
 				    <th>Booking Number</th>
 					<th>First Name</th>
 					<th>Last Name</th>
+					<th>Check-in</th>
+					<th>Check-out</th>
+					<th>Number of Guests</th>
 					<th>Email Address</th>
-					<th>Date</th>
+					<th>Phone Number</th>
 					<th>Room Type</th>
 				</tr>
 			
@@ -32,8 +35,11 @@
 				<td th:text="${field.bookingNumber}"></td>
 				<td th:text="${field.firstName}"></td>
 				<td th:text="${field.lastName}"></td>
+				<td th:text="${field.checkIn}"></td>
+				<td th:text="${field.checkOut}"></td>
+				<td th:text="${field.guest}"></td>
 					<td th:text="${field.email}"></td>
-					<td th:text="${field.date}"></td>
+					<td th:text="${phone}"></td>
 					<td th:text="${field.roomType}"></td>
 				</tr>
 			</tbody>

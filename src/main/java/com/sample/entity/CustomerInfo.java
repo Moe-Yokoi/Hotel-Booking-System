@@ -6,31 +6,39 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.SequenceGenerator;
 
 @Entity
 public class CustomerInfo {
 	
 	@Id
-	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	@GeneratedValue(strategy = GenerationType.SEQUENCE)
+	@SequenceGenerator(name ="customerInfo_seq")
 	private long bookingNumber;
 	
 	private String firstName;
 	private String lastName;
 	private String email;
+	private String phone; 
 	private String roomType;
-	private String date;
+	private String checkIn;
+	private String checkOut;
+	private int guest;
 	
 	
 	public CustomerInfo() {
 		
 	}
-	public CustomerInfo(String firstName, String lastName, String email, String roomType, String date) {
+	public CustomerInfo(String firstName, String lastName, String email, String phone, String roomType, String checkIn, String checkOut, int guest) {
 		super();
 		this.firstName = firstName;
 		this.lastName = lastName;
 		this.email = email;
+		this.phone = phone;
 		this.roomType = roomType;
-		this.date = date;
+		this.checkIn = checkIn;
+		this.checkOut = checkOut;
+		this.guest = guest;
 		
 	}
 	public long getBookingNumber() {
@@ -63,11 +71,30 @@ public class CustomerInfo {
 	public void setRoomType(String roomType) {
 		this.roomType = roomType;
 	}
-	public String getDate() {
-		return date;
+	
+	public String getPhone() {
+		return phone;
 	}
-	public void setDate(String date) {
-		this.date = date;
+	public void setPhone(String phone) {
+		this.phone = phone;
+	}
+	public String getCheckIn() {
+		return checkIn;
+	}
+	public void setCheckIn(String checkIn) {
+		this.checkIn = checkIn;
+	}
+	public String getCheckOut() {
+		return checkOut;
+	}
+	public void setCheckOut(String checkOut) {
+		this.checkOut = checkOut;
+	}
+	public int getGuest() {
+		return guest;
+	}
+	public void setGuest(int guest) {
+		this.guest = guest;
 	}
 
 }
