@@ -37,7 +37,7 @@ public class CancellationController {
 	@PostMapping("/complete")
 	  public String delete(@RequestParam long bookingNumber) {
 	    infoRepo.deleteById(bookingNumber);
-	    return "messages/cancellation-successful";
+	    return "messages/cancellationSuccessful";
 	  }
 
 }
