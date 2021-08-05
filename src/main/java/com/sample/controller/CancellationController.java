@@ -1,6 +1,7 @@
 package com.sample.controller;
 
 import java.util.List;
+import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -24,20 +25,20 @@ public class CancellationController {
 	@GetMapping
 	public String displayBookingPage(Model model) {
       model.addAttribute("customer", new CustomerInfo());
-	
-      List<CustomerInfo> requestedInfo = infoRepo.findAll();
-      model.addAttribute("requestedInfo", requestedInfo);
+//	
+//      List<CustomerInfo> requestedInfo = infoRepo.findAll();
+//      model.addAttribute("requestedInfo", requestedInfo);
       
-//	  return "forms/request-cancellation";
-      return "forms/cancel";
+	  return "forms/request-cancellation";
+//      return "forms/cancel";
 	}
 	
-//	@PostMapping("/requestedinfo")
-//	public String request(Model model, @RequestParam("bookingNumber") long bookingNumber) {
-//		CustomerInfo requestedInfo = infoRepo.getOne(bookingNumber);
-//        model.addAttribute("requestedInfo", requestedInfo);
-//    return "forms/cancel";
-//}
+	@PostMapping("/requestedInfo")
+	public String request(Model model, @RequestParam long bookingNumber) {
+		CustomerInfo requestedInfo = infoRepo.getOne(bookingNumber);
+        model.addAttribute("requestedInfo", requestedInfo);
+    return "forms/cancel";
+}
 	
 	
 	@PostMapping("/complete")
