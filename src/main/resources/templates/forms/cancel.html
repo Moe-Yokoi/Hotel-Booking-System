@@ -14,7 +14,7 @@
 <title>Cancellation</title>
 </head>
 <body>
-<form action="/cancel/complete" method="POST">
+
 <table>
 			
 				<tr>
@@ -27,6 +27,7 @@
 					<th>Email Address</th>
 					<th>Phone Number</th>
 					<th>Room Type</th>
+					<th>Cancel</th>
 				</tr>
 			
 		
@@ -38,20 +39,21 @@
 				<td th:text="${field.checkIn}"></td>
 				<td th:text="${field.checkOut}"></td>
 				<td th:text="${field.guest}"></td>
-					<td th:text="${field.email}"></td>
-					<td th:text="${field.phone}"></td>
-					<td th:text="${field.roomType}"></td>
+				<td th:text="${field.email}"></td>
+				<td th:text="${field.phone}"></td>
+				<td th:text="${field.roomType}"></td>
+				<td>
+					<form th:action="@{/cancel/complete?bookingNumber=} + ${field.bookingNumber}" method="POST" >  	
+					 	<button type="submit" class="btn btn-primary">complete cancellation</button>							
+					</form>
+				</td>
 				</tr>
 			</tbody>
 		</table> 
 		
 
 
-  	
-  <button type="submit" class="btn btn-primary">complete cancellation</button>
-		
-		
-</form>
+
 		
 		<a href = "/"><button type= "button">Home</button></a>
 
