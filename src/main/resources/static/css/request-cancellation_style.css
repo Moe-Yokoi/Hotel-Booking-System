@@ -1,0 +1,67 @@
+.section {
+	position: relative;
+	height: 100vh;
+}
+
+.section .section-center {
+	position: absolute;
+	top: 50%;
+	left: 0;
+	right: 0;
+	-webkit-transform: translateY(-50%);
+	transform: translateY(-50%);
+}
+
+#booking {
+	font-family: 'Montserrat', sans-serif;
+	background-image: url('../img/request-cancellation_background.jpg');
+	background-size: cover;
+	background-position: center;
+}
+
+#booking::before {
+	content: '';
+	position: absolute;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	top: 0;
+	background: rgba(255, 255, 255, 0.8);
+}
+
+
+.submit-btn {
+	color: #fff;
+	background-color: #e3a6a1;
+	font-weight: 700;
+	height: 45px;
+	padding: 10px 20px;
+	font-size: 18px;
+	border: none;
+	display: inline-block;
+	width: 10%;
+	text-transform: capitalize;
+}
+
+h2 {
+	font-weight: bold;
+	text-align: center;
+	margin-bottom: 50px;
+}
+
+.input-text {
+	border: solid, rgba(0, 0, 0, 0.5), 2px;
+	height: 55px;
+	font-size: 20px;
+	text-align: center;
+	font-weight: 500;
+	width: 300px;
+	-webkit-box-shadow: 0px 0px 10px -5px rgba(0, 0, 0, 0.8);
+	box-shadow: 0px 0px 10px -5px rgba(0, 0, 0, 0.8);
+	margin-bottom: 30px;
+	display: inline-block;
+}
+
+.container {
+	text-align: center;
+}
