@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Error</title>
+</head>
+<body>
+<h4>Booking Number Not Found</h4>
+
+<a href = "/"><button type= "button">Home</button></a>
+
+
+</body>
+</html>

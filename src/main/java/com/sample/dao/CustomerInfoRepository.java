@@ -15,6 +15,10 @@ public interface CustomerInfoRepository extends CrudRepository<CustomerInfo, Lon
 	public List<CustomerInfo> findAll();
 
 	public CustomerInfo getOne(long bookingNumber);
+
+	
+
+	
 	
 	
 	
